@@ -53,6 +53,21 @@ https://github.com/pranay123-stack/ibkr-spx-options-engine-v18
 
 ---
 
+## ibkr-nq-futures-bot
+
+NASDAQ-100 E-mini futures — an overnight-reopen strategy trading the 6 PM session open.
+
+The thesis is that the reopen starts moves which continue through London and New York, so the
+system holds through them rather than scalping; partial exits at prior highs/lows are supported
+but deliberately not the default. Ships the written strategy specification, a systemd unit for
+running it as a service, and a separated `src/execution/` order layer.
+
+**60 source files, 2 test files.**
+
+https://github.com/pranay123-stack/ibkr-nq-futures-bot
+
+---
+
 ## The part worth reading
 
 The **auto-restart supervisor** (`run_with_autorestart.py`) distinguishes three exit
@@ -69,7 +84,7 @@ has moved to. Getting process lifecycle wrong is a P&L bug, not an ops bug.
 | Portfolio | Relevance |
 |---|---|
 | [SPX & SPY Trading Strategies](https://github.com/pranay123-stack/spx-spy-strategies) | The strategy side — 0DTE structures, credit spreads, gamma and theta handling |
-| [NASDAQ Futures Trading Strategies](https://github.com/pranay123-stack/nasdaq-futures-strategies) | NQ futures work through the same TWS API |
+| [NASDAQ Futures Trading Strategies](https://github.com/pranay123-stack/nasdaq-futures-strategies) | The strategy side of the NQ futures work |
 | [ES Futures Trading Strategies](https://github.com/pranay123-stack/es-futures-strategies) | E-mini S&P execution through IBKR |
 | [crypto-exchange-development](https://github.com/pranay123-stack/crypto-exchange-development) | Execution architecture and the verified-vs-self-reported testing standard |
 
